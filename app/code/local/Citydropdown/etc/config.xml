@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ITG_Citydropdown>
+            <version>0.1.0</version>
+        </ITG_Citydropdown>
+    </modules>
+    
+     <frontend>
+        <routers>
+            <citydropdown>
+                <use>standard</use>
+                <args>
+                    <module>ITG_Citydropdown</module>
+                    <frontName>citydropdown</frontName>
+                </args>
+            </citydropdown>
+        </routers>
+    </frontend>
+    
+    <global>
+        <helpers>
+            <citydropdown>
+                <class>ITG_Citydropdown_Helper</class>
+            </citydropdown>
+        </helpers>
+
+<models>
+      <citydropdown>
+         <class>ITG_Citydropdown_Model</class>
+        <resourceModel>citydropdown_resource</resourceModel>
+      </citydropdown>
+ 
+      <citydropdown_resource>
+        <class>ITG_Citydropdown_Model_Resource</class>
+        <entities>
+            <city>
+               <table>directory_country_region_city</table>
+            </city >
+        </entities>
+    </citydropdown_resource>
+    
+</models>
+
+<resources>
+        <citydropdown_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </citydropdown_write>
+       <citydropdown_read>
+          <connection>
+             <use>core_read</use>
+          </connection>
+       </citydropdown_read>
+</resources>
+
+   <admin>
+        <routers>
+            <marques>
+                <use>admin</use>
+                <args>
+                    <module>ITG_Citydropdown</module>
+                    <frontName>citydropdown</frontName>
+                </args>
+            </marques>
+        </routers>
+    </admin>
+
+    </global>
+</config>

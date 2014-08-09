@@ -1,0 +1,8 @@
+Change ITG with your company name 
+
+you have to create a table by excuting the sql file 
+
+Elmehdi Boubetana
+
+
+
